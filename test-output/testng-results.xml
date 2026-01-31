@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-31T09:22:59 IST" name="Default suite" finished-at="2026-01-31T09:23:04 IST" duration-ms="5084">
+  <suite started-at="2026-01-31T11:29:02 IST" name="Default suite" finished-at="2026-01-31T11:29:07 IST" duration-ms="5649">
     <groups>
     </groups>
-    <test started-at="2026-01-31T09:22:59 IST" name="Default test" finished-at="2026-01-31T09:23:04 IST" duration-ms="5084">
-      <class name="com.api.tests.UserDetailsAPITest">
-        <test-method signature="UserDetails()[pri:0, instance:com.api.tests.UserDetailsAPITest@4686afc2]" started-at="2026-01-31T09:22:59 IST" name="UserDetails" finished-at="2026-01-31T09:23:04 IST" duration-ms="5026" status="PASS">
+    <test started-at="2026-01-31T11:29:02 IST" name="Default test" finished-at="2026-01-31T11:29:07 IST" duration-ms="5649">
+      <class name="com.api.tests.LoginAPITest">
+        <test-method signature="loginapitest()[pri:0, instance:com.api.tests.LoginAPITest@38cee291]" started-at="2026-01-31T11:29:02 IST" name="loginapitest" finished-at="2026-01-31T11:29:07 IST" duration-ms="5572" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserDetails -->
-      </class> <!-- com.api.tests.UserDetailsAPITest -->
+        </test-method> <!-- loginapitest -->
+      </class> <!-- com.api.tests.LoginAPITest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
