@@ -10,20 +10,18 @@ import org.testng.annotations.Test;
 import com.api.constants.roles;
 import com.api.utils.AuthTokenProvider;
 import com.api.utils.ConfigManager;
+import com.api.utils.SpecUtils;
 
 public class MasterAPITest {
 
 	@Test
 	public void MasterAPI() throws IOException {
 		given()
-		.baseUri(ConfigManager.getproperty("BASE_URI"))
-		.header("Authorization",AuthTokenProvider.gettoken(roles.FD))
-		.contentType("")
+		.spec(SpecUtils.requestspecwithAuth(roles.FD))
 		.when()
 		.post("master")//default content-type application/url-formencoded
 		.then()
-		.statusCode(200)
-		.time(Matchers.lessThan(5000L))
+		.spec(SpecUtils.responsespec_OK())
 		.body("message",Matchers.equalTo("Success"))
 		.body("data",Matchers.notNullValue())
 		.body("data",Matchers.hasKey("mst_oem"))
@@ -37,13 +35,11 @@ public class MasterAPITest {
 	public void Master_Negative() throws IOException {
 		
 		given()
-		.baseUri(ConfigManager.getproperty("BASE_URI"))
-		.header("Authorization","")
-		.contentType("")
+		.spec(SpecUtils.requestspec())
 		.when()
 		.post("master")//default content-type application/url-formencoded
 		.then()
-		.statusCode(401);
+		.spec(SpecUtils.responsespec(401));
 		
 		
 	}
