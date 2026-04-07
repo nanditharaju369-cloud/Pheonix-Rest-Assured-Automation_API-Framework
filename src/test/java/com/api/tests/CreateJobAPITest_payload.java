@@ -30,7 +30,7 @@ public class CreateJobAPITest_payload {
 	public void createjobAPI() throws IOException {
 		Customer customer=new Customer("Nandy","Shetty","887655656","","nanditha76@gmail.com","");
 		CustomerAddress Address = new CustomerAddress("D 40","Vasath galaxy","Bangur nagar","Inorbut","Mumbai","67677","India","Maharastha");
-		CustomerProduct Product=new CustomerProduct("2025-12-25T18:30:00.000Z","7976543456768767","7976543456768767","7976543456768767","2025-12-25T18:30:00.000Z",1,1);
+		CustomerProduct Product=new CustomerProduct("2025-12-25T18:30:00.000Z","1076543456763767","1076543456763767","1076543456763767","2025-12-25T18:30:00.000Z",1,1);
 		Problems problem = new Problems(1,"Battery Issue");
 
 		List<Problems> problemsList = new ArrayList<>();
@@ -45,7 +45,6 @@ public class CreateJobAPITest_payload {
 		given()
 		.spec(SpecUtils.requestspecwithroleandpayload(roles.FD, create_payload))
 		//this 3 """ is coming from jaVa 15...this enhances readability in body
-		.body(create_payload)
 		.when()
 		.post("/job/create")
 		.then()

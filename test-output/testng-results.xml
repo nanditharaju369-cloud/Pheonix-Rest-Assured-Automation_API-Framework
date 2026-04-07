@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-07T08:37:42 IST" name="Default suite" finished-at="2026-04-07T08:37:48 IST" duration-ms="5973">
+  <suite started-at="2026-04-07T21:28:29 IST" name="Default suite" finished-at="2026-04-07T21:28:34 IST" duration-ms="4362">
     <groups>
     </groups>
-    <test started-at="2026-04-07T08:37:42 IST" name="Default test" finished-at="2026-04-07T08:37:48 IST" duration-ms="5973">
+    <test started-at="2026-04-07T21:28:29 IST" name="Default test" finished-at="2026-04-07T21:28:34 IST" duration-ms="4362">
       <class name="com.api.tests.CreateJobAPITest_payload">
-        <test-method signature="createjobAPI()[pri:0, instance:com.api.tests.CreateJobAPITest_payload@4b45a2f5]" started-at="2026-04-07T08:37:42 IST" name="createjobAPI" finished-at="2026-04-07T08:37:48 IST" duration-ms="5869" status="PASS">
+        <test-method signature="createjobAPI()[pri:0, instance:com.api.tests.CreateJobAPITest_payload@4b45a2f5]" started-at="2026-04-07T21:28:29 IST" name="createjobAPI" finished-at="2026-04-07T21:28:34 IST" duration-ms="4291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createjobAPI -->
