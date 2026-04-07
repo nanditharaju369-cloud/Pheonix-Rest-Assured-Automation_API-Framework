@@ -1,5 +1,6 @@
 package com.api.tests;
 
+import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import com.api.constants.roles;
@@ -13,6 +14,7 @@ import com.api.utils.ConfigManager;
 import com.api.utils.SpecUtils;
 
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 
 import static io.restassured.RestAssured.*;
 
@@ -28,7 +30,7 @@ public class CreateJobAPITest_payload {
 	public void createjobAPI() throws IOException {
 		Customer customer=new Customer("Nandy","Shetty","887655656","","nanditha76@gmail.com","");
 		CustomerAddress Address = new CustomerAddress("D 40","Vasath galaxy","Bangur nagar","Inorbut","Mumbai","67677","India","Maharastha");
-		CustomerProduct Product=new CustomerProduct("2025-12-25T18:30:00.000Z","8876543456768767","8876543456768767","8876543456768767","2025-12-25T18:30:00.000Z",1,1);
+		CustomerProduct Product=new CustomerProduct("2025-12-25T18:30:00.000Z","7976543456768767","7976543456768767","7976543456768767","2025-12-25T18:30:00.000Z",1,1);
 		Problems problem = new Problems(1,"Battery Issue");
 
 		List<Problems> problemsList = new ArrayList<>();
@@ -47,7 +49,10 @@ public class CreateJobAPITest_payload {
 		.when()
 		.post("/job/create")
 		.then()
-		.spec(SpecUtils.responsespec_OK());
+		.spec(SpecUtils.responsespec_OK())
+		.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("response_schema/CreateJob.json"))
+		.body("message",Matchers.equalTo("Job created successfully. "))
+		.body("data.job_number",Matchers.startsWith("JOB_"));
 		
 		
 	}
