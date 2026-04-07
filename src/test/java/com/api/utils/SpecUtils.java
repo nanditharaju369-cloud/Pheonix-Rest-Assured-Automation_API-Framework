@@ -54,7 +54,22 @@ public static RequestSpecification requestspec(Object payload) throws IOExceptio
 	return request;
 	
 }
-
+public static RequestSpecification requestspecwithroleandpayload(roles role,Object payload) throws IOException {
+	RequestSpecification request=new RequestSpecBuilder()
+			.setBaseUri(ConfigManager.getproperty("BASE_URI"))
+			.setContentType(ContentType.JSON)
+			.addHeader("Authorization",AuthTokenProvider.gettoken(role))
+			.setAccept(ContentType.JSON)
+			.setBody(payload)
+			.log(LogDetail.URI)
+			.log(LogDetail.METHOD)
+			.log(LogDetail.HEADERS)
+			.log(LogDetail.BODY)
+			.build();
+	
+	return request;
+	
+}
 
 public static RequestSpecification requestspecwithAuth(roles role) throws IOException {
 	RequestSpecification request=new RequestSpecBuilder()

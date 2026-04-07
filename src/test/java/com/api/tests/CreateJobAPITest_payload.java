@@ -1,0 +1,55 @@
+package com.api.tests;
+
+import org.testng.annotations.Test;
+
+import com.api.constants.roles;
+import com.api.pojo.CreateJob_Payload;
+import com.api.pojo.Customer;
+import com.api.pojo.CustomerAddress;
+import com.api.pojo.CustomerProduct;
+import com.api.pojo.Problems;
+import com.api.utils.AuthTokenProvider;
+import com.api.utils.ConfigManager;
+import com.api.utils.SpecUtils;
+
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CreateJobAPITest_payload {
+
+	
+	
+	@Test
+	public void createjobAPI() throws IOException {
+		Customer customer=new Customer("Nandy","Shetty","887655656","","nanditha76@gmail.com","");
+		CustomerAddress Address = new CustomerAddress("D 40","Vasath galaxy","Bangur nagar","Inorbut","Mumbai","67677","India","Maharastha");
+		CustomerProduct Product=new CustomerProduct("2025-12-25T18:30:00.000Z","8876543456768767","8876543456768767","8876543456768767","2025-12-25T18:30:00.000Z",1,1);
+		Problems problem = new Problems(1,"Battery Issue");
+
+		List<Problems> problemsList = new ArrayList<>();
+		problemsList.add(problem);
+		CreateJob_Payload create_payload=new CreateJob_Payload(0,2,1,1,customer,Address,Product,problemsList);
+		
+		
+		
+		
+		
+		
+		given()
+		.spec(SpecUtils.requestspecwithroleandpayload(roles.FD, create_payload))
+		//this 3 """ is coming from jaVa 15...this enhances readability in body
+		.body(create_payload)
+		.when()
+		.post("/job/create")
+		.then()
+		.spec(SpecUtils.responsespec_OK());
+		
+		
+	}
+	
+}
