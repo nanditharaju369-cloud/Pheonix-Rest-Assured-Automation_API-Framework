@@ -35,7 +35,7 @@ public class CountAPITest {
 	@Test(description = "verify of the Count API is working for FD user for miss auth ", groups = { "Negative","API", "Regression", "smoke" })
 	public void countAPI_Missauth() throws IOException {
 		 given()
-		 .spec(SpecUtils.requestspecwithAuth(roles.FD))
+		 .spec(SpecUtils.requestspec())
 		.when()
 		.get("/dashboard/count")
 		.then()
