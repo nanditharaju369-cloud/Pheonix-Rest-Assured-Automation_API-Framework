@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hamcrest.Matchers;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.api.constants.Model;
@@ -28,22 +29,29 @@ import com.api.utils.SpecUtils;
 import io.restassured.module.jsv.JsonSchemaValidator;
 
 public class CreateJobAPITest_payload {
-
+	private CreateJob_Payload create_payload;
 	
 	
-	@Test
-	public void createjobAPI() throws IOException {
+	@BeforeMethod(description="Setups the payload for create job API")
+	public void setup()
+	{
 		Customer customer=new Customer("Nandy","Shetty","887655656","","nanditha76@gmail.com","");
 		CustomerAddress Address = new CustomerAddress("D 40","Vasath galaxy","Bangur nagar","Inorbut","Mumbai","67677","India","Maharastha");
-		CustomerProduct CustomerProduct=new CustomerProduct(gettimewithdaysago(10),"1086543456763767","1086543456763767","1086543456763767",gettimewithdaysago(10),
+		CustomerProduct CustomerProduct=new CustomerProduct(gettimewithdaysago(10),"2086543456763767","2086543456763767","2086543456763767",gettimewithdaysago(10),
 				Product.NEXUS_2.getcode(),Model.NEXUS_2_BLUE.getcode());
-		Problems problem = new Problems(Problemslist.POOR_BATTTERY_LIFE.getcode(),"Battery Issue");
+		Problems problem = new Problems(Problemslist.SMARTPHONE_IS_RUNNING_SLOW.getcode(),"Battery Issue");
 
 		List<Problems> problemsList = new ArrayList<>();
 		problemsList.add(problem);
-		CreateJob_Payload create_payload=new CreateJob_Payload(ServiceLoc.SERVICE_LOCATION_A.getcode(),
-				Platform.FRONT_DESK.getcode(),Warranty.IN_WARRANTY.getcode(),OEM.APPLE.getcode(),
+		create_payload=new CreateJob_Payload(ServiceLoc.SERVICE_LOCATION_A.getcode(),
+				Platform.FRONT_DESK.getcode(),Warranty.IN_WARRANTY.getcode(),OEM.GOOGLE.getcode(),
 				customer,Address,CustomerProduct,problemsList);
+	}
+	
+	@Test(description = "verify of the Create JOb API is working for FD user ", groups = { "API", "Regression", "smoke" })
+	public void createjobAPI() throws IOException {
+	
+		
 		
 		
 		
