@@ -1,27 +1,31 @@
 package com.api.tests;
 
+import static com.api.utils.DateTimeUtil.gettimewithdaysago;
+import static io.restassured.RestAssured.given;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
+import com.api.constants.Model;
+import com.api.constants.OEM;
+import com.api.constants.Platform;
+import com.api.constants.Problemslist;
+import com.api.constants.Product;
+import com.api.constants.ServiceLoc;
+import com.api.constants.Warranty;
 import com.api.constants.roles;
 import com.api.pojo.CreateJob_Payload;
 import com.api.pojo.Customer;
 import com.api.pojo.CustomerAddress;
 import com.api.pojo.CustomerProduct;
 import com.api.pojo.Problems;
-import com.api.utils.AuthTokenProvider;
-import com.api.utils.ConfigManager;
-import static com.api.utils.DateTimeUtil.*;
 import com.api.utils.SpecUtils;
 
-import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
-
-import static io.restassured.RestAssured.*;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CreateJobAPITest_payload {
 
@@ -31,12 +35,15 @@ public class CreateJobAPITest_payload {
 	public void createjobAPI() throws IOException {
 		Customer customer=new Customer("Nandy","Shetty","887655656","","nanditha76@gmail.com","");
 		CustomerAddress Address = new CustomerAddress("D 40","Vasath galaxy","Bangur nagar","Inorbut","Mumbai","67677","India","Maharastha");
-		CustomerProduct Product=new CustomerProduct(gettimewithdaysago(10),"1076543456763767","1076543456763767","1076543456763767",gettimewithdaysago(10),1,1);
-		Problems problem = new Problems(1,"Battery Issue");
+		CustomerProduct CustomerProduct=new CustomerProduct(gettimewithdaysago(10),"1086543456763767","1086543456763767","1086543456763767",gettimewithdaysago(10),
+				Product.NEXUS_2.getcode(),Model.NEXUS_2_BLUE.getcode());
+		Problems problem = new Problems(Problemslist.POOR_BATTTERY_LIFE.getcode(),"Battery Issue");
 
 		List<Problems> problemsList = new ArrayList<>();
 		problemsList.add(problem);
-		CreateJob_Payload create_payload=new CreateJob_Payload(0,2,1,1,customer,Address,Product,problemsList);
+		CreateJob_Payload create_payload=new CreateJob_Payload(ServiceLoc.SERVICE_LOCATION_A.getcode(),
+				Platform.FRONT_DESK.getcode(),Warranty.IN_WARRANTY.getcode(),OEM.APPLE.getcode(),
+				customer,Address,CustomerProduct,problemsList);
 		
 		
 		
