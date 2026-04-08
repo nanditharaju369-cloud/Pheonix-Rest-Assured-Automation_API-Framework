@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class CountAPITest {
 
-	@Test
+	@Test(description = "verify of the Count API is working for FD user ", groups = { "API", "Regression", "smoke" })
 	public void verifycountAPI() throws IOException {
 	 given()
 	 .spec(SpecUtils.requestspecwithAuth(roles.FD))
@@ -32,7 +32,7 @@ public class CountAPITest {
 	 .body(matchesJsonSchemaInClasspath("response_schema/CountAPIschema.json"));
 	}
 	
-	@Test
+	@Test(description = "verify of the Count API is working for FD user for miss auth ", groups = { "Negative","API", "Regression", "smoke" })
 	public void countAPI_Missauth() throws IOException {
 		 given()
 		 .spec(SpecUtils.requestspecwithAuth(roles.FD))

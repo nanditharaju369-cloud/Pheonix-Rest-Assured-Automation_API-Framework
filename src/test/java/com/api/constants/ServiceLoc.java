@@ -1,0 +1,22 @@
+package com.api.constants;
+
+public enum ServiceLoc {
+
+	SERVICE_LOCATION_A(1),
+
+	SERVICE_LOCATION_B(2),
+
+	SERVICE_LOCATION_C(3);
+	
+	int code;
+	
+	ServiceLoc(int code){
+		this.code=code;
+		
+	}
+
+	public int getcode() {
+		return code;
+	}
+	
+}

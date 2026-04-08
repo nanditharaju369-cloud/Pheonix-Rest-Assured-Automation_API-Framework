@@ -14,7 +14,7 @@ import com.api.utils.SpecUtils;
 
 public class MasterAPITest {
 
-	@Test
+	@Test(description = "verify of the Master API is working for FD user ", groups = { "API", "Regression", "smoke" })
 	public void MasterAPI() throws IOException {
 		given()
 		.spec(SpecUtils.requestspecwithAuth(roles.FD))
@@ -31,7 +31,7 @@ public class MasterAPITest {
 		.body("data.mst_oem.id",Matchers.everyItem(Matchers.notNullValue()));
 		
 	}
-	@Test
+	@Test(description = "verify of the Master API is working for FD user for no auth ", groups = { "Negative","API", "Regression", "smoke" })
 	public void Master_Negative() throws IOException {
 		
 		given()
