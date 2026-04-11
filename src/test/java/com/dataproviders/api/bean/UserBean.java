@@ -1,17 +1,17 @@
 package com.dataproviders.api.bean;
 
-public class User_POJO {
+public class UserBean {
 
 	
 	private String username;
 	private String password;
 	
-	public User_POJO() {
+	public UserBean() {
 		
 	}
 	
 	
-	public User_POJO(String username, String password) {
+	public UserBean(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
