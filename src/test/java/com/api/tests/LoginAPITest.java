@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.api.pojo.UserCredentials;
+import com.api.Record_Models.UserCredentials;
 import com.api.utils.SpecUtils;
 
 import io.restassured.module.jsv.JsonSchemaValidator;

@@ -11,6 +11,11 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.api.Record_Models.CreateJob_Payload;
+import com.api.Record_Models.Customer;
+import com.api.Record_Models.CustomerAddress;
+import com.api.Record_Models.CustomerProduct;
+import com.api.Record_Models.Problems;
 import com.api.constants.Model;
 import com.api.constants.OEM;
 import com.api.constants.Platform;
@@ -19,11 +24,6 @@ import com.api.constants.Product;
 import com.api.constants.ServiceLoc;
 import com.api.constants.Warranty;
 import com.api.constants.roles;
-import com.api.pojo.CreateJob_Payload;
-import com.api.pojo.Customer;
-import com.api.pojo.CustomerAddress;
-import com.api.pojo.CustomerProduct;
-import com.api.pojo.Problems;
 import com.api.utils.SpecUtils;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
