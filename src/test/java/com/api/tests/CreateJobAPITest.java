@@ -2,12 +2,12 @@ package com.api.tests;
 
 import org.testng.annotations.Test;
 
+import com.api.Record_Models.CreateJob_Payload;
+import com.api.Record_Models.Customer;
+import com.api.Record_Models.CustomerAddress;
+import com.api.Record_Models.CustomerProduct;
+import com.api.Record_Models.Problems;
 import com.api.constants.roles;
-import com.api.pojo.CreateJob_Payload;
-import com.api.pojo.Customer;
-import com.api.pojo.CustomerAddress;
-import com.api.pojo.CustomerProduct;
-import com.api.pojo.Problems;
 import com.api.utils.AuthTokenProvider;
 import com.api.utils.ConfigManager;
 
