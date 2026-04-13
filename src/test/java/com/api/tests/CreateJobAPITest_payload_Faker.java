@@ -27,6 +27,7 @@ import com.api.constants.ServiceLoc;
 import com.api.constants.Warranty;
 import com.api.constants.roles;
 import com.api.utils.DateTimeUtil;
+import com.api.utils.FakerDataGenerator;
 import com.api.utils.SpecUtils;
 import com.github.javafaker.Faker;
 
@@ -39,53 +40,8 @@ public class CreateJobAPITest_payload_Faker {
 	@BeforeMethod(description="Setups the payload for create job API")
 	public void setup()
 	{
-	
-
-			
-			Faker faker = new Faker(new Locale("en-IND"));
-
-			String fname = faker.name().firstName();
-			String lname = faker.name().lastName();
-			String Mobilenumber = faker.numerify("70########");
-			String altnumber = faker.numerify("70########");
-			String customeremailaddress = faker.internet().emailAddress();
-			String customeraltemailaddress = faker.internet().emailAddress();
-			Customer customer = new Customer(fname, lname, Mobilenumber, altnumber, customeremailaddress,
-					customeraltemailaddress);
-
-			String flatNumber = faker.numerify("###");
-			String apartmentName = faker.company().name();
-			String streetName = faker.address().streetName();
-			String landmark = faker.address().secondaryAddress();
-			String area = faker.address().cityName();
-			String pinCode = faker.numerify("######");
-
-			String state = faker.address().state();
-			CustomerAddress customeraddress = new CustomerAddress(flatNumber, apartmentName, streetName, landmark, area,
-					pinCode, COUNTRY, state);
-
-			// CustomerProduct Fake Object
-			String dop = DateTimeUtil.gettimewithdaysago(10);
-			String imeiSerialNumber = faker.numerify("###############");
-			String popUrl = faker.internet().url();
-
-			CustomerProduct customerProduct = new CustomerProduct(dop, imeiSerialNumber, imeiSerialNumber, imeiSerialNumber,
-					popUrl, 1, 1);
-
-			String fakeremark = faker.lorem().sentence(10);
-			Random random = new Random();
-			int problemID=random.nextInt(2) + 1;
-
-			Problems problems = new Problems(problemID, fakeremark);
-			
-			List<Problems> problemlist=new ArrayList<Problems>();
-			problemlist.add(problems);
-			
-			
-			create_payload=new CreateJob_Payload(0, 2, 1, 1, customer, customeraddress, customerProduct, problemlist);
-
+		create_payload=FakerDataGenerator.Generatefakecreatejobdata();
 	}
-	
 	
 	@Test(description = "verify of the Create JOb API is working for FD user ", groups = { "API", "Regression", "smoke" })
 	public void createjobAPI() throws IOException {
