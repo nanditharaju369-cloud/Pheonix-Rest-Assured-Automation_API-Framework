@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.api.tests.datadriven.CreateJobAPITest_Datadriven">
+      <class name="com.api.tests.CreateJobAPITest_payload_Faker">
         <methods>
           <include name="createjobAPI"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.api.tests.datadriven.CreateJobAPITest_Datadriven -->
+      </class> <!-- com.api.tests.CreateJobAPITest_payload_Faker -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
