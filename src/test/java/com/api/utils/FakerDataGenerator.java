@@ -20,7 +20,7 @@ public class FakerDataGenerator {
 	private static final int MST_PLATFORM_ID = 2;
 	private static final int MST_WARRANY_STATUS_ID = 1;
 	private static final int MST_OEM_ID = 1;
-
+	static Random random;
 	private FakerDataGenerator() {
 
 	}
@@ -56,13 +56,20 @@ public class FakerDataGenerator {
 	
 
 	private static List<Problems> genratefakeproblemslist() {
-
-		String fakeremark = faker.lorem().sentence(10);
 		Random random = new Random();
-		int randomindex = random.nextInt(validproblemsid.length);
-		Problems problems = new Problems(validproblemsid[randomindex], fakeremark);
+		int count=random.nextInt(3)+1;
+		int randomindex;
+		String fakeremark;
 		List<Problems> problemlist = new ArrayList<Problems>();
+		for(int i=1;i<=count;i++) {
+
+		 fakeremark = faker.lorem().sentence(10);
+		
+	 randomindex = random.nextInt(validproblemsid.length);
+		Problems problems = new Problems(validproblemsid[randomindex], fakeremark);
+		
 		problemlist.add(problems);
+		}
 		return problemlist;
 	}
 	
