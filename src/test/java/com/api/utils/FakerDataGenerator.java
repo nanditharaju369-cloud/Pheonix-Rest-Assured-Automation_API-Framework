@@ -59,12 +59,15 @@ public class FakerDataGenerator {
 
 		String fakeremark = faker.lorem().sentence(10);
 		Random random = new Random();
-		int problemID = random.nextInt(2) + 1;
-		Problems problems = new Problems(problemID, fakeremark);
+		int randomindex = random.nextInt(validproblemsid.length);
+		Problems problems = new Problems(validproblemsid[randomindex], fakeremark);
 		List<Problems> problemlist = new ArrayList<Problems>();
 		problemlist.add(problems);
 		return problemlist;
 	}
+	
+	private static final int validproblemsid[]= {1,2,3,4,5,6,7,8,9,10,11,12,15,16,17,19,20,22,24,26,27,28,29};
+	
 
 	private static CustomerProduct generataefakecustomerproductdata() {
 		String dop = DateTimeUtil.gettimewithdaysago(10);
