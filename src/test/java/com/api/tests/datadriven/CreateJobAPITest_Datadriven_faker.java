@@ -32,7 +32,7 @@ public class CreateJobAPITest_Datadriven_faker {
 	private CreateJob_Payload create_payload;
 
 	@Test(description = "verify of the Create JOb API is working for FD user ", 
-			groups = { "API", "Regression","datadriven" }, 
+			groups = { "API", "Regression","datadriven","faker" }, 
 			dataProviderClass = com.dataproviders.DataProviderUtils.class, 
 			dataProvider = "CreateJobAPIFakerDataProvider")
 	public void createjobAPI(CreateJob_Payload createjobpayload) throws IOException {
