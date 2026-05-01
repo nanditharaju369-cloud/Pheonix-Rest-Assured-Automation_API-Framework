@@ -40,7 +40,7 @@ public class DatabaseManagerhikari {
 					hkariconfig.setJdbcUrl(ConfigManager.getproperty("DB_URL"));
 					hkariconfig.setUsername(ConfigManager.getproperty("DB_USERNAME"));
 					hkariconfig.setPassword(ConfigManager.getproperty("DB_PASSWORD"));
-
+			
 					// config
 					hkariconfig.setMaximumPoolSize(Integer.parseInt(ConfigManager.getproperty("MAXIMUM_POOL_SIZE")));
 					hkariconfig.setMinimumIdle(Integer.parseInt(ConfigManager.getproperty("MINIMUM_IDLE_TIME")));

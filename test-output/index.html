@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Nanditha.Raju\AppData\Local\Temp\testng-eclipse-481039380\testng-customsuite.xml</span>
+                    <span>C:\Users\Nanditha\AppData\Local\Temp\testng-eclipse-85989690\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">5 methods, 5 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.CountAPITest" class="method navigator-link" hash-for-method="verifycountAPI">verifycountAPI</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.datadriven.CreateJobAPITest_DBDriven" class="method navigator-link" hash-for-method="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.datadriven.CreateJobAPITest_DBDriven" class="method navigator-link" hash-for-method="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.datadriven.CreateJobAPITest_DBDriven" class="method navigator-link" hash-for-method="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.datadriven.CreateJobAPITest_DBDriven" class="method navigator-link" hash-for-method="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.api.tests.datadriven.CreateJobAPITest_DBDriven" class="method navigator-link" hash-for-method="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,137 +141,172 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.api.tests.CountAPITest</span>
+              <span class="class-name">com.api.tests.datadriven.CreateJobAPITest_DBDriven</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifycountAPI">
-                  </a> <!-- verifycountAPI -->
-                  <span class="method-name">verifycountAPI</span>
-                  <div class="stack-trace">java.net.ConnectException: Connection timed out: connect
-	at java.base/sun.nio.ch.Net.connect0(Native Method)
-	at java.base/sun.nio.ch.Net.connect(Net.java:589)
-	at java.base/sun.nio.ch.Net.connect(Net.java:578)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
-	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
-	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
-	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
-	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
-	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
-	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+                  <a name="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">
+                  </a> <!-- createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...) -->
+                  <span class="method-name">createjobAPI</span>
+                  <span class="parameters">(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id=1, customer=Customer[first_name=Srinvas, last_name=K, mobile_number=9811122334, mobile_number_alt=, email_id=test@gmail.com, email_id_alt=], customer_address=CustomerAddress[flat_number=010, apartment_name=Apt111, street_name=Homadevanahalli, landmark=Near Podar, area=Bangalore, pincode=560083, country=Karnataka, state=India], product=CustomerProduct[dop=2026-04-20, serial_number=13235812527895, imei1=13235812527895, imei2=13235812527895, popurl=2026-04-20T20:38:07.239211239Z, product_id=1, mst_model_id=1], problems=[Problems[id=1, remark=Battery Issue]]])</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1296)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
 	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:89)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:148)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:148)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:148)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1791)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1797)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1240)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:798)
-	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.invoke(TransformMetaMethod.java:59)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass$1.invoke(ClosureMetaClass.java:217)
-	at org.codehaus.groovy.runtime.metaclass.TransformMetaMethod.doMethodInvoke(TransformMetaMethod.java:66)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:318)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy:180)
-	at io.restassured.internal.RequestSpecificationImpl$_post_closure2.doCall(RequestSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:338)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:274)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:270)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1013)
-	at groovy.lang.Closure.call(Closure.java:471)
-	at org.codehaus.groovy.runtime.ConvertedClosure.invokeCustom(ConvertedClosure.java:54)
-	at org.codehaus.groovy.runtime.ConversionHandler.invoke(ConversionHandler.java:114)
-	at jdk.proxy1/jdk.proxy1.$Proxy14.get(Unknown Source)
-	at io.restassured.internal.assertbridge.GroovyAssertBridge.runWithUnwrap(GroovyAssertBridge.java:46)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
-	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:179)
-	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
-	at com.api.utils.AuthTokenProvider.gettoken(AuthTokenProvider.java:48)
-	at com.api.utils.SpecUtils.requestspecwithAuth(SpecUtils.java:79)
-	at com.api.tests.CountAPITest.verifycountAPI(CountAPITest.java:22)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.api.tests.datadriven.CreateJobAPITest_DBDriven.createjobAPI(CreateJobAPITest_DBDriven.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
 
 </div> <!-- stack-trace -->
                   <em>
-(verify of the Count API is working for FD user )                  </em>
+(verify of the Create JOb API is working for FD user )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">
+                  </a> <!-- createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...) -->
+                  <span class="method-name">createjobAPI</span>
+                  <span class="parameters">(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id=1, customer=Customer[first_name=nandish, last_name=lk, mobile_number=8217406456, mobile_number_alt=, email_id=nandishlk@gmail.com, email_id_alt=], customer_address=CustomerAddress[flat_number=D 404, apartment_name=Maruti nilaya, street_name=Btm alayout, landmark=near bus stop, area=bangalore, pincode=560076, country=India, state=Karnataka], product=CustomerProduct[dop=2026-04-20, serial_number=19173231583716, imei1=19173231583716, imei2=19173231583716, popurl=2026-04-20T20:37:02.942030389Z, product_id=1, mst_model_id=1], problems=[Problems[id=1, remark=Battary issue]]])</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.api.tests.datadriven.CreateJobAPITest_DBDriven.createjobAPI(CreateJobAPITest_DBDriven.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+</div> <!-- stack-trace -->
+                  <em>
+(verify of the Create JOb API is working for FD user )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">
+                  </a> <!-- createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...) -->
+                  <span class="method-name">createjobAPI</span>
+                  <span class="parameters">(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id=1, customer=Customer[first_name=Debika, last_name=Nag, mobile_number=7434565434, mobile_number_alt=, email_id=debika0989@gmail.com, email_id_alt=], customer_address=CustomerAddress[flat_number=912, apartment_name=Thames, street_name=Napier, landmark=Station, area=Reading, pincode=700129, country=Berkshire, state=UK], product=CustomerProduct[dop=2026-04-21, serial_number=88886596754988, imei1=88886596754988, imei2=88886596754988, popurl=2026-04-21T00:11:29.086750705Z, product_id=1, mst_model_id=1], problems=[Problems[id=1, remark=Battery Issue]]])</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.api.tests.datadriven.CreateJobAPITest_DBDriven.createjobAPI(CreateJobAPITest_DBDriven.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+</div> <!-- stack-trace -->
+                  <em>
+(verify of the Create JOb API is working for FD user )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">
+                  </a> <!-- createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...) -->
+                  <span class="method-name">createjobAPI</span>
+                  <span class="parameters">(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id=1, customer=Customer[first_name=Laxman, last_name=Teli, mobile_number=8446981010, mobile_number_alt=, email_id=testlaxman@test1.com, email_id_alt=], customer_address=CustomerAddress[flat_number=A-22, apartment_name=GS, street_name=Shahunagar, landmark=Siddivinayak Temple, area=Chinchwad, pincode=411222, country=India, state=MH], product=CustomerProduct[dop=2026-04-25, serial_number=155490025191112, imei1=155490025191112, imei2=155490025191112, popurl=2026-04-25T21:33:38.442243279Z, product_id=1, mst_model_id=1], problems=[Problems[id=1, remark=Battery Issue]]])</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.api.tests.datadriven.CreateJobAPITest_DBDriven.createjobAPI(CreateJobAPITest_DBDriven.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+</div> <!-- stack-trace -->
+                  <em>
+(verify of the Create JOb API is working for FD user )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)">
+                  </a> <!-- createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...) -->
+                  <span class="method-name">createjobAPI</span>
+                  <span class="parameters">(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id=2, customer=Customer[first_name=veer, last_name=kumar, mobile_number=9398102868, mobile_number_alt=kumar, email_id=pldasveeresh@gmail.com, email_id_alt=], customer_address=CustomerAddress[flat_number=112, apartment_name=112, street_name=3, landmark=baba temple, area=hyderabad, pincode=500060, country=India, state=Telangana], product=CustomerProduct[dop=2026-04-20, serial_number=23456789876543234, imei1=23456789876543234, imei2=23456789876543234, popurl=2026-04-20T18:30:00.000Z, product_id=1, mst_model_id=3], problems=[Problems[id=4, remark=Sync]]])</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:105)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at com.api.tests.datadriven.CreateJobAPITest_DBDriven.createjobAPI(CreateJobAPITest_DBDriven.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+</div> <!-- stack-trace -->
+                  <em>
+(verify of the Create JOb API is working for FD user )                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,7 +314,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Nanditha.Raju\AppData\Local\Temp\testng-eclipse-481039380\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Nanditha\AppData\Local\Temp\testng-eclipse-85989690\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -268,11 +323,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.api.tests.CountAPITest&quot;&gt;
+      &lt;class name=&quot;com.api.tests.datadriven.CreateJobAPITest_DBDriven&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifycountAPI&quot;/&gt;
+          &lt;include name=&quot;createjobAPI&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.api.tests.CountAPITest --&gt;
+      &lt;/class&gt; &lt;!-- com.api.tests.datadriven.CreateJobAPITest_DBDriven --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -300,7 +355,7 @@
               <span class="test-group-name">API</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifycountAPI</span>
+                <span class="method-in-group-name">createjobAPI</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -308,15 +363,15 @@
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifycountAPI</span>
+                <span class="method-in-group-name">createjobAPI</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">smoke</span>
+              <span class="test-group-name">datadriven</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifycountAPI</span>
+                <span class="method-in-group-name">createjobAPI</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -336,16 +391,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifycountAPI')
-data.setCell(0, 2, 'com.api.tests.CountAPITest')
-data.setCell(0, 3, 22914);
+data.setCell(0, 1, 'createjobAPI')
+data.setCell(0, 2, 'com.api.tests.datadriven.CreateJobAPITest_DBDriven')
+data.setCell(0, 3, 6390);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createjobAPI')
+data.setCell(1, 2, 'com.api.tests.datadriven.CreateJobAPITest_DBDriven')
+data.setCell(1, 3, 6389);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createjobAPI')
+data.setCell(2, 2, 'com.api.tests.datadriven.CreateJobAPITest_DBDriven')
+data.setCell(2, 3, 6389);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'createjobAPI')
+data.setCell(3, 2, 'com.api.tests.datadriven.CreateJobAPITest_DBDriven')
+data.setCell(3, 3, 6388);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'createjobAPI')
+data.setCell(4, 2, 'com.api.tests.datadriven.CreateJobAPITest_DBDriven')
+data.setCell(4, 3, 6388);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -360,16 +431,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.api.tests.CountAPITest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">countAPI_Missauth</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -378,12 +442,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.tests.CountAPITest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.api.tests.datadriven.CreateJobAPITest_DBDriven</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifycountAPI</span>
+                <span class="method-name">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</span>
+                <span class="method-start">2 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createjobAPI(CreateJob_Payload[mst_service_location_id=1, mst_platform_id=2, mst_warrenty_status_id=1, mst_oem_id...)</span>
+                <span class="method-start">2 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
