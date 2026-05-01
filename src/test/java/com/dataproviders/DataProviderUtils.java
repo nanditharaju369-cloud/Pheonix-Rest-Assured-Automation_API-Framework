@@ -1,5 +1,7 @@
 package com.dataproviders;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -9,6 +11,7 @@ import org.testng.annotations.DataProvider;
 import com.api.Record_Models.CreateJob_Payload;
 import com.api.utils.CSV_ReaderUtility;
 import com.api.utils.CreateJobBeanMapper;
+import com.database.dao.CreateJobPayloadDataDAO;
 import com.dataproviders.api.bean.CreateJobBean;
 import com.dataproviders.api.bean.UserBean;
 
@@ -35,5 +38,16 @@ public class DataProviderUtils {
 		}
 		return payloadlist.iterator();
 		
+	}
+	@DataProvider(name="CreateJObAPIDBProvider", parallel=true)
+	public static Iterator<CreateJob_Payload> createjobAOIDBprovider() throws SQLException, IOException {
+	
+	List<CreateJobBean>beanlist=  CreateJobPayloadDataDAO.getCreateJobPayloadData();
+	List<CreateJob_Payload> payloadlist=new ArrayList<CreateJob_Payload>();
+for(CreateJobBean createjobbean:beanlist) {
+CreateJob_Payload payload=CreateJobBeanMapper.mapper(createjobbean);
+payloadlist.add(payload);
+}
+return payloadlist.iterator();
 	}
 }
