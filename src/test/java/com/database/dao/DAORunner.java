@@ -11,7 +11,7 @@ import com.db.model.CustomerDBmodel;
 public class DAORunner {
 
 	public static void main(String[] args) throws SQLException, IOException {
-		CustomerDBmodel customerdb=CustomerDAO.getcustomerinfo();
+		CustomerDBmodel customerdb=CustomerDAO.getcustomerinfo(268594);
 		
 		System.out.println(customerdb);
 		

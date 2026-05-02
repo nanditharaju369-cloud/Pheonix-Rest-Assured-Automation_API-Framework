@@ -2,6 +2,7 @@ package com.database.dao;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,19 +12,22 @@ import com.db.model.CustomerDBmodel;
 
 public class CustomerDAO {
 	private static final String CUSTOMER_DETAIL_QUERY="""
-			select * from tr_customer where id=268594
+			select * from tr_customer where id=?
 			""";
 	
-	public static CustomerDBmodel getcustomerinfo() throws SQLException, IOException {
+	public static CustomerDBmodel getcustomerinfo(int custid) throws SQLException, IOException {
 		CustomerDBmodel customermodel = null;
 		Connection conn=DatabaseManagerhikari.getconnection();
-		Statement statement=conn.createStatement();
-		ResultSet resultset=statement.executeQuery(CUSTOMER_DETAIL_QUERY);
+		//instead of concat the id we are using preparestatement
+		PreparedStatement pstatement=conn.prepareStatement(CUSTOMER_DETAIL_QUERY);
+		pstatement.setInt(1, custid);
+		ResultSet resultset=pstatement.executeQuery();
+		
 		
 		while(resultset.next()) {
 			System.out.println(resultset.getString("first_name"));
 			
-			 customermodel=new CustomerDBmodel(resultset.getString("first_name"), resultset.getString("last_name"), resultset.getString("mobile_number"), resultset.getString("mobile_number_alt"), resultset.getString("email_id"), resultset.getString("email_id_alt"));
+			 customermodel=new CustomerDBmodel(resultset.getString("first_name"), resultset.getString("last_name"), resultset.getString("mobile_number"), resultset.getString("mobile_number_alt"), resultset.getString("email_id"), resultset.getString("email_id_alt"),resultset.getInt("tr_customer_address_id"));
 		}
 		return customermodel;
 		
