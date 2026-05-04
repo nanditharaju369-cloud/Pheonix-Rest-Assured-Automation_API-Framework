@@ -35,6 +35,15 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+    <groupId>io.github.cdimascio</groupId>
+    <artifactId>java-dotenv</artifactId>
+    <version>5.2.2</version>
+    <scope>compile</scope>
+</dependency>
+		
+		
+		
+		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<version>9.5.0</version>
