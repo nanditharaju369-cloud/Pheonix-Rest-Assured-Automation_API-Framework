@@ -10,7 +10,8 @@ package com.database;
 	import java.sql.Statement;
 
 	import com.api.utils.ConfigManager;
-	import com.zaxxer.hikari.HikariConfig;
+import com.api.utils.envUtil;
+import com.zaxxer.hikari.HikariConfig;
 	import com.zaxxer.hikari.HikariDataSource;
 
 	public class DatabaseManagerhikari {
@@ -39,10 +40,9 @@ package com.database;
 						// ConfigManager.getproperty("DB_USERNAME"),
 						// ConfigManager.getproperty("DB_PASSWORD"));
 						HikariConfig hkariconfig = new HikariConfig();
-						hkariconfig.setJdbcUrl(ConfigManager.getproperty("DB_URL"));
-						hkariconfig.setUsername(ConfigManager.getproperty("DB_USERNAME"));
-						hkariconfig.setPassword(ConfigManager.getproperty("DB_PASSWORD"));
-				
+						hkariconfig.setJdbcUrl(envUtil.getvalue("DB_URL"));
+						hkariconfig.setUsername(envUtil.getvalue("DB_Username"));
+						hkariconfig.setPassword(envUtil.getvalue("DB_PASSWORD"));
 						// config
 						hkariconfig.setMaximumPoolSize(Integer.parseInt(ConfigManager.getproperty("MAXIMUM_POOL_SIZE")));
 						hkariconfig.setMinimumIdle(Integer.parseInt(ConfigManager.getproperty("MINIMUM_IDLE_TIME")));
